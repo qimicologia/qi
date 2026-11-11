@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>qi · Reishi, tintura de doble extracción</title>
+<meta name="description" content="qi Reishi: tintura artesanal de Ganoderma lucidum, de doble extracción, elaborada en Mendoza. Frascos de 100 y 50 ml.">
+<style>
+:root{
+  --green:#2f4a3c; --deep:#223629; --cream:#f2ede1; --paper:#f6f1e4; --white:#fffdf7;
+  --muted:#5f5a4a; --rule:#d6ccb0; --accent:#8a3324; --gold:#e3c9a0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--green);font-family:Georgia,"Times New Roman",serif;line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+.sans{font-family:Helvetica,Arial,sans-serif}
+.kicker{font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+h2{font-weight:400;font-size:clamp(30px,6.5vw,44px);line-height:1.15;margin-bottom:18px}
+p{margin-bottom:14px;color:#33402f}
+.muted{color:var(--muted)}
+.dark .kicker{color:var(--gold)}
+.dark p{color:var(--cream);opacity:.9}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:20;background:rgba(34,54,41,.94);backdrop-filter:blur(6px);color:var(--cream)}
+nav .in{max-width:900px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;font-family:Helvetica,Arial,sans-serif}
+nav .logo{font-size:22px;font-weight:500;text-decoration:none}
+nav .links{display:none;gap:22px;font-size:13px;letter-spacing:.08em}
+nav .links a{text-decoration:none;opacity:.85}
+nav .links a:hover{opacity:1}
+nav .go{background:var(--cream);color:var(--deep);text-decoration:none;padding:8px 16px;border-radius:2px;font-size:13px;letter-spacing:.05em}
+@media(min-width:700px){nav .links{display:flex}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 50% 0%,#3b5c4a 0%,var(--green) 45%,var(--deep) 100%);color:var(--cream);text-align:center;padding:84px 22px 96px}
+.hero .bgring{position:absolute;left:50%;top:50%;width:760px;height:760px;transform:translate(-50%,-52%);opacity:.07;pointer-events:none}
+.hero .ring{position:relative;width:104px;height:104px;margin:0 auto 12px;display:block}
+.hero .qi{position:relative;font-family:Helvetica,Arial,sans-serif;font-weight:500;font-size:26px;letter-spacing:.06em}
+.hero h1{position:relative;font-weight:400;font-size:clamp(64px,19vw,128px);line-height:1;margin:12px 0 6px;letter-spacing:-.01em}
+.hero .latin{position:relative;font-style:italic;font-size:clamp(18px,4vw,24px);color:var(--gold)}
+.hero .tag{color:var(--cream);position:relative;max-width:520px;margin:30px auto 0;font-size:clamp(18px,3.6vw,22px);line-height:1.5;opacity:.95}
+.hero .sub{position:relative;font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;margin-top:28px;opacity:.75}
+.cta-row{position:relative;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-block;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:15px;letter-spacing:.05em;padding:14px 28px;border-radius:2px;transition:.2s}
+.btn.solid{background:var(--cream);color:var(--deep)}
+.btn.solid:hover{background:#fff}
+.btn.line{border:1px solid var(--cream);color:var(--cream)}
+.btn.line:hover{background:rgba(242,237,225,.12)}
+.btn.green{background:var(--green);color:var(--cream)}
+.btn.green:hover{background:var(--deep)}
+
+/* STRIP */
+.strip{background:var(--deep);color:var(--cream);font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-align:center;padding:14px 12px;display:flex;justify-content:center;gap:10px 26px;flex-wrap:wrap}
+.strip span{opacity:.85}
+
+section{padding:76px 0}
+.dark{background:var(--green);color:var(--cream)}
+.cream{background:var(--cream)}
+
+/* STORY / TIMELINE */
+.tl{list-style:none;margin-top:30px;position:relative}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:1px;background:rgba(227,201,160,.4)}
+.tl li{position:relative;padding:0 0 28px 38px}
+.tl li::before{content:"";position:absolute;left:0;top:7px;width:15px;height:15px;border-radius:50%;background:var(--green);border:1px solid var(--gold)}
+.tl .when{font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.tl b{display:block;font-weight:400;font-size:22px;margin:2px 0 2px}
+.tl p{margin:0;font-size:16px}
+.quote{border-left:2px solid var(--gold);padding:6px 0 6px 20px;margin:34px 0 0;font-style:italic;font-size:20px;color:var(--cream);opacity:.95}
+
+/* MAKING */
+.steps{list-style:none;counter-reset:s;margin-top:26px;display:grid;gap:14px}
+@media(min-width:620px){.steps{grid-template-columns:1fr 1fr}}
+.steps li{counter-increment:s;background:var(--white);border:1px solid var(--rule);border-radius:3px;padding:22px 20px 18px;position:relative}
+.steps li::before{content:counter(s);position:absolute;top:-14px;left:18px;width:30px;height:30px;background:var(--green);color:var(--cream);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Helvetica,Arial,sans-serif;font-size:14px}
+.steps b{display:block;font-weight:600;font-size:18px;margin-bottom:4px}
+.steps p{margin:0;font-size:15.5px;color:var(--muted)}
+.note-tr{margin-top:26px;padding:16px 20px;border-left:3px solid var(--accent);background:var(--white);font-size:16px}
+
+/* PRODUCTS */
+.prod{display:grid;gap:18px;margin-top:28px}
+@media(min-width:620px){.prod{grid-template-columns:1fr 1fr}}
+.pcard{background:var(--white);border:1px solid var(--rule);border-radius:3px;padding:30px 24px;text-align:center;position:relative}
+.pcard::before{content:"";position:absolute;inset:6px;border:1px solid var(--rule);border-radius:2px;pointer-events:none}
+.pcard .ml{font-size:60px;line-height:1;font-weight:400}
+.pcard .ml small{font-size:22px;margin-left:4px}
+.pcard .t{font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin:10px 0 20px}
+.pcard .btn{position:relative}
+.ing{margin-top:26px;text-align:center;font-size:16px}
+
+/* USE */
+.dose{background:var(--green);color:var(--cream);padding:30px 22px;border-radius:3px;text-align:center;margin:8px 0 24px}
+.dose small{display:block;font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.28em;text-transform:uppercase;opacity:.75;margin-bottom:8px}
+.dose .big{font-size:clamp(36px,10vw,56px);line-height:1.1}
+.dose p{color:var(--cream);opacity:.85;margin:10px 0 0}
+.tri{display:grid;gap:14px;margin-top:10px}
+@media(min-width:620px){.tri{grid-template-columns:repeat(3,1fr)}}
+.tri div{background:var(--white);border:1px solid var(--rule);border-radius:3px;padding:18px;font-size:16px}
+.tri b{display:block;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;font-weight:400}
+
+/* PROSPECTO */
+details{border-top:1px solid var(--rule)}
+details:last-of-type{border-bottom:1px solid var(--rule)}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:18px 0;font-size:20px}
+summary::-webkit-details-marker{display:none}
+summary span{flex:none;width:30px;height:30px;border:1px solid var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Helvetica,Arial,sans-serif;font-size:13px}
+summary::after{content:"+";margin-left:auto;font-family:Helvetica,Arial,sans-serif;font-size:22px;color:var(--accent)}
+details[open] summary::after{content:"\2212"}
+details .body{padding:0 0 22px 44px}
+@media(max-width:480px){details .body{padding-left:0}}
+ul.clean{list-style:none}
+ul.clean li{padding:9px 0 9px 24px;border-bottom:1px dashed var(--rule);position:relative;font-size:16px}
+ul.clean li::before{content:"";position:absolute;left:3px;top:19px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.notice{background:var(--white);border-left:3px solid var(--accent);padding:16px 20px;border-radius:0 3px 3px 0;margin-bottom:14px}
+.notice p{margin:0}
+
+/* CONTACT */
+.contact{text-align:center}
+.btns{display:grid;gap:12px;margin-top:24px;max-width:520px;margin-left:auto;margin-right:auto}
+@media(min-width:560px){.btns{grid-template-columns:1fr 1fr}}
+.btns .btn{display:block;padding:16px 18px}
+.btns small{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;opacity:.7;margin-bottom:2px}
+.sources{font-family:Helvetica,Arial,sans-serif;font-size:13px;padding:34px 0 10px}
+.sources ul{list-style:none}
+.sources li{padding:4px 0}
+.sources a{color:var(--muted)}
+
+footer{background:var(--deep);color:var(--cream);text-align:center;padding:40px 20px 90px;font-family:Helvetica,Arial,sans-serif;font-size:13px}
+footer .qi{font-size:24px;font-weight:500;margin-bottom:6px}
+footer p{color:var(--cream);opacity:.75;margin:4px 0}
+
+/* FLOATING WHATSAPP */
+.fab{position:fixed;right:16px;bottom:16px;z-index:30;background:var(--cream);color:var(--deep);text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:14px;padding:13px 20px;border-radius:30px;box-shadow:0 6px 22px rgba(0,0,0,.28);border:1px solid var(--green)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="in">
+    <a class="logo" href="#top">qi</a>
+    <div class="links">
+      <a href="#historia">Historia</a>
+      <a href="#elaboracion">Elaboración</a>
+      <a href="#tintura">Tintura</a>
+      <a href="#prospecto">Prospecto</a>
+    </div>
+    <a class="go" href="#contacto">Pedir</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="bgring" viewBox="0 0 100 100" aria-hidden="true">
+    <circle cx="50" cy="50" r="47" fill="none" stroke="#f2ede1" stroke-width="1"/>
+    <circle cx="50" cy="50" r="42" fill="none" stroke="#f2ede1" stroke-width=".4"/>
+  </svg>
+  <svg class="ring" viewBox="0 0 100 100" role="img" aria-label="Logo qi">
+    <circle cx="50" cy="50" r="47" fill="none" stroke="#f2ede1" stroke-width="2"/>
+    <circle cx="50" cy="50" r="42" fill="none" stroke="#f2ede1" stroke-width=".8"/>
+    <g transform="translate(24.5 21) scale(.52)">
+      <path d="M190 60 C152 84 140 116 140 132 C140 153 162 167 190 167 C218 167 240 153 240 132 C240 116 228 84 190 60 Z" transform="translate(-140 -60)" fill="#f2ede1"/>
+      <ellipse cx="50" cy="70" rx="24" ry="10" fill="#2f4a3c"/>
+      <rect x="42" y="70" width="16" height="32" rx="4" fill="#f2ede1"/>
+    </g>
+  </svg>
+  <div class="qi">qi</div>
+  <h1>Reishi</h1>
+  <div class="latin">Ganoderma lucidum</div>
+  <p class="tag">El hongo que China llamó durante siglos “la hierba superior”, ahora en una tintura artesanal hecha en Mendoza.</p>
+  <div class="sub">Tintura de doble extracción</div>
+  <div class="cta-row">
+    <a class="btn solid" href="#contacto">Quiero mi frasco</a>
+    <a class="btn line" href="#historia">Conocer su historia</a>
+  </div>
+</header>
+
+<div class="strip">
+  <span>Hecha en Mendoza</span><span>Doble extracción</span><span>Frascos de 100 y 50 ml</span>
+</div>
+
+<section class="dark" id="historia">
+  <div class="wrap">
+    <div class="kicker rv">Un hongo con historia</div>
+    <h2 class="rv">Más de dos mil años de tradición</h2>
+    <p class="rv">El reishi (<i>Lingzhi</i> en China, <i>Yeongji</i> en Corea) es de los hongos más venerados de Oriente. Era tan escaso en estado silvestre que hallar uno se tomaba como señal de buena fortuna.</p>
+    <ul class="tl">
+      <li class="rv"><span class="when">Dinastía Han · 206 a.C. – 220 d.C.</span><b>El hongo de la corte</b><p>Los gobernadores avisaban a la capital cuando aparecía uno silvestre, y se presentaba en las “ceremonias de Lingzhi”.</p></li>
+      <li class="rv"><span class="when">Hacia el 200 d.C.</span><b>Una “hierba superior”</b><p>El <i>Shennong Ben Cao Jing</i>, clásico de la medicina china, lo ubica entre las hierbas superiores, aptas para uso prolongado, y distingue seis colores. El rojo era el más valorado.</p></li>
+      <li class="rv"><span class="when">Siglo III–IV</span><b>El camino taoísta</b><p>Ermitaños taoístas lo buscaban en la montaña y lo usaban en retiros y meditación.</p></li>
+      <li class="rv"><span class="when">Año 984 · Japón</span><b>Reishi</b><p>Aparece en el <i>Ishinho</i>, tratado de medicina japonesa, y se vuelve símbolo de longevidad.</p></li>
+      <li class="rv"><span class="when">Año 1613 · Corea</span><b>Yeongji</b><p>El <i>Donguibogam</i> describe cómo prepararlo. Se regalaba entre familias aristocráticas.</p></li>
+    </ul>
+    <p class="quote rv">Hoy todavía se regala a mayores y maestros, en el Año Nuevo lunar.</p>
+    <p class="rv" style="margin-top:30px">Entre las formas tradicionales de prepararlo estaban la decocción en agua, el polvo con miel y <b>la tintura en aguardiente, macerada semanas o meses</b>. De esa última línea viene qi Reishi.</p>
+  </div>
+</section>
+
+<section id="elaboracion">
+  <div class="wrap">
+    <div class="kicker rv">Elaboración</div>
+    <h2 class="rv">Dos extracciones, una tintura</h2>
+    <p class="rv">Cada compuesto del hongo se disuelve en un solvente distinto. Por eso lo trabajamos dos veces.</p>
+    <ol class="steps">
+      <li class="rv"><b>Molienda fina</b><p>El cuerpo fructífero seco se muele para exponer la mayor superficie posible.</p></li>
+      <li class="rv"><b>Maceración en alcohol de cereal</b><p>El alcohol extrae lo que el agua no puede, como los triterpenos.</p></li>
+      <li class="rv"><b>Decocción en agua caliente</b><p>El hongo ya macerado se hierve en agua, que extrae los polisacáridos.</p></li>
+      <li class="rv"><b>Unión de ambos extractos</b><p>Los dos líquidos se combinan en una sola tintura.</p></li>
+    </ol>
+    <p class="note-tr rv">Reishi, alcohol de cereal y agua. Nada más.</p>
+  </div>
+</section>
+
+<section class="cream" id="tintura">
+  <div class="wrap">
+    <div class="kicker rv">La tintura</div>
+    <h2 class="rv">Elegí tu frasco</h2>
+    <div class="prod">
+      <div class="pcard rv">
+        <div class="ml">100<small>ml</small></div>
+        <div class="t">Frasco con gotero</div>
+        <a class="btn green" href="https://wa.me/5492615416606?text=Hola!%20Quiero%20consultar%20por%20qi%20Reishi%20de%20100%20ml" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </div>
+      <div class="pcard rv">
+        <div class="ml">50<small>ml</small></div>
+        <div class="t">Frasco con gotero</div>
+        <a class="btn green" href="https://wa.me/5492615416606?text=Hola!%20Quiero%20consultar%20por%20qi%20Reishi%20de%2050%20ml" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+      </div>
+    </div>
+    <p class="ing rv"><b>Ingredientes:</b> alcohol de cereal, agua y cuerpo fructífero de <i>Ganoderma lucidum</i>.</p>
+
+    <h2 style="margin-top:60px" class="rv">Cómo se toma</h2>
+    <div class="dose rv">
+      <small>Por día</small>
+      <div class="big">20 a 40 gotas</div>
+      <p>1 ml equivale a unas 20 gotas.</p>
+    </div>
+    <div class="tri">
+      <div class="rv"><b>Antes de usar</b>Agitar el frasco.</div>
+      <div class="rv"><b>Cómo</b>Puede diluirse en infusiones frías o en agua.</div>
+      <div class="rv"><b>Sabor</b>Amargo, terroso y leñoso. Diluida se suaviza.</div>
+    </div>
+  </div>
+</section>
+
+<section id="prospecto">
+  <div class="wrap">
+    <div class="kicker rv">Prospecto</div>
+    <h2 class="rv">Información para usar con tranquilidad</h2>
+
+    <details>
+      <summary><span>1</span>Precauciones</summary>
+      <div class="body">
+        <div class="notice"><p><b>Atención:</b> no recomendado en embarazo, lactancia ni personas anticoaguladas.</p></div>
+        <p><b>Tenga especial cuidado, o evítelo, si:</b></p>
+        <ul class="clean">
+          <li>Toma <b>anticoagulantes, antiagregantes o antiinflamatorios</b> (AINEs): puede aumentar el riesgo de sangrado.</li>
+          <li>Tiene una <b>cirugía programada</b>: avise al médico que lo toma.</li>
+          <li>Toma <b>inmunosupresores</b> o tuvo un trasplante: no se conocen bien las interacciones.</li>
+          <li>Tiene <b>enfermedad hepática</b>: se describieron casos aislados de hepatitis asociados al hongo.</li>
+          <li>Tiene <b>presión baja</b> o toma antihipertensivos: por precaución.</li>
+          <li>Es <b>alérgico a los hongos</b>.</li>
+        </ul>
+        <p class="muted" style="margin-top:12px">No hay datos de seguridad en embarazo ni lactancia, ni estudios a largo plazo. Ante dudas, consulte con un profesional de la salud.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span>2</span>Posibles efectos adversos</summary>
+      <div class="body">
+        <p>En general son leves y poco frecuentes: molestias de estómago, diarrea o constipación, mareo, boca seca, picazón o sangrado nasal. Si aparece alguno, suspenda el uso y consulte.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span>3</span>Conservación</summary>
+      <div class="body">
+        <p>En un lugar fresco, oscuro y bien cerrado. Agitar antes de usar.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="dark contact" id="contacto">
+  <div class="wrap">
+    <div class="kicker">Contacto</div>
+    <h2>Escribinos</h2>
+    <p>Hacemos nuestras tinturas en Mendoza. Consultas, pedidos y envíos por WhatsApp.</p>
+    <div class="btns">
+      <a class="btn solid" href="https://wa.me/5492615416606" target="_blank" rel="noopener"><small>WhatsApp</small>2615 41-6606</a>
+      <a class="btn solid" href="https://wa.me/5492615981439" target="_blank" rel="noopener"><small>WhatsApp</small>2615 98-1439</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap sources">
+  <div class="kicker">Fuentes</div>
+  <ul>
+    <li><a href="https://pubmed.ncbi.nlm.nih.gov/31677138/" target="_blank" rel="noopener">Lin 2019: Lingzhi en la medicina y la cultura china (PubMed)</a></li>
+    <li><a href="https://mycogenius.com/blogs/articles/reishi-mushroom-traditional-history" target="_blank" rel="noopener">Mycogenius: el reishi en la medicina tradicional</a></li>
+    <li><a href="https://www.DRUGS.COM/npp/reishi-mushroom.html" target="_blank" rel="noopener">Drugs.com: Reishi mushroom (seguridad e interacciones)</a></li>
+  </ul>
+</div>
+
+<footer>
+  <div class="qi">qi</div>
+  <p>Tinturas de hongos · Mendoza, Argentina</p>
+</footer>
+
+<a class="fab" href="https://wa.me/5492615416606?text=Hola!%20Quiero%20consultar%20por%20qi%20Reishi" target="_blank" rel="noopener">WhatsApp</a>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
